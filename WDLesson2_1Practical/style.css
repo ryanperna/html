@@ -11,8 +11,11 @@ selector{
 
 /* Challenge 2: Change the size for the font for all headings size 1 to 60pt */
 
-heading {
+h3 {
   color: blue;
+}
+
+h1 {
   font-size:60pt;
 }
   
