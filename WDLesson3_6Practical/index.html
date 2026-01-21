@@ -2,10 +2,21 @@
   <div class="container">
     <div class="card">
       <h4>Enter Grades</h4>
-      <input type="number" id="grade1" placeholder="Grade 1"><br><br>
-      <input type="number" id="grade2" placeholder="Grade 2"><br><br>
-      <input type="number" id="grade3" placeholder="Grade 3"><br><br>
-      <button onclick="calculateAverage()">Calculate Average</button>
+
+      <div>
+        <input type="number" id="grade1" placeholder="Grade 1">
+      </div>
+
+      <div>
+        <input type="number" id="grade2" placeholder="Grade 2">
+      </div>
+
+      <div>
+        <input type="number" id="grade3" placeholder="Grade 3">
+      </div>
+
+      <input type="button" value="Calculate Average" onclick="calculateAverage()">
+
       <p id="averageResult"></p>
     </div>
   </div>
@@ -15,11 +26,25 @@
   <div class="container">
     <div class="card">
       <h4>Enter Two Points</h4>
-      <input type="number" id="x1" placeholder="x₁"><br><br>
-      <input type="number" id="y1" placeholder="y₁"><br><br>
-      <input type="number" id="x2" placeholder="x₂"><br><br>
-      <input type="number" id="y2" placeholder="y₂"><br><br>
-      <button onclick="calculateSlope()">Calculate Slope</button>
+
+      <div>
+        <input type="number" id="x1" placeholder="x₁">
+      </div>
+
+      <div>
+        <input type="number" id="y1" placeholder="y₁">
+      </div>
+
+      <div>
+        <input type="number" id="x2" placeholder="x₂">
+      </div>
+
+      <div>
+        <input type="number" id="y2" placeholder="y₂">
+      </div>
+
+      <input type="button" value="Calculate Slope" onclick="calculateSlope()">
+
       <p id="slopeResult"></p>
     </div>
   </div>
@@ -29,9 +54,17 @@
   <div class="container">
     <div class="card">
       <h4>Enter Height and Weight</h4>
-      <input type="number" id="height" placeholder="Height (m)"><br><br>
-      <input type="number" id="weight" placeholder="Weight (kg)"><br><br>
-      <button onclick="calculateBMI()">Calculate BMI</button>
+
+      <div>
+        <input type="number" id="height" placeholder="Height (m)">
+      </div>
+
+      <div>
+        <input type="number" id="weight" placeholder="Weight (kg)">
+      </div>
+
+      <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+
       <p id="bmiResult"></p>
     </div>
   </div>
