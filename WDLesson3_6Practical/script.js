@@ -27,3 +27,4 @@ function calculateBMI() {
 
   document.getElementById("bmiResult").innerHTML = "BMI: " + bmi;
 }
+
