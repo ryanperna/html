@@ -1,71 +1,95 @@
-<div class="solutions">
-  <div class="container">
-    <div class="card">
-      <h4>Enter Grades</h4>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WD Lesson 3.6 Practical</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
 
-      <div>
-        <input type="number" id="grade1" placeholder="Grade 1">
-      </div>
-
-      <div>
-        <input type="number" id="grade2" placeholder="Grade 2">
-      </div>
-
-      <div>
-        <input type="number" id="grade3" placeholder="Grade 3">
-      </div>
-
-      <input type="button" value="Calculate Average" onclick="calculateAverage()">
-
-      <p id="averageResult"></p>
+    <div id="banner" class="container center">
+      <h1> Formulas</h1>
     </div>
-  </div>
-</div>
 
-<div class="solutions">
-  <div class="container">
-    <div class="card">
-      <h4>Enter Two Points</h4>
-
+    <!-- AVERAGE SECTION -->
+    <div class="container subbanner">
       <div>
-        <input type="number" id="x1" placeholder="x₁">
+        <h3> Average </h3>
+        <p>Calculate and display the average of three grades that the user enters.</p>
+        <a class="links" href="https://www.quora.com/What-is-the-formula-to-calculate-the-overall-average-of-grades"> Resource </a>
       </div>
-
-      <div>
-        <input type="number" id="y1" placeholder="y₁">
-      </div>
-
-      <div>
-        <input type="number" id="x2" placeholder="x₂">
-      </div>
-
-      <div>
-        <input type="number" id="y2" placeholder="y₂">
-      </div>
-
-      <input type="button" value="Calculate Slope" onclick="calculateSlope()">
-
-      <p id="slopeResult"></p>
     </div>
-  </div>
-</div>
 
-<div class="solutions last">
-  <div class="container">
-    <div class="card">
-      <h4>Enter Height and Weight</h4>
+    <div class="solutions">
+      <div class="container">
+        <div class="card">
+          <h4>Enter Grades</h4>
 
-      <div>
-        <input type="number" id="height" placeholder="Height (m)">
+          <div><input type="number" id="grade1" placeholder="Grade 1"></div>
+          <div><input type="number" id="grade2" placeholder="Grade 2"></div>
+          <div><input type="number" id="grade3" placeholder="Grade 3"></div>
+
+          <input type="button" value="Calculate Average" onclick="calculateAverage()">
+
+          <p id="averageResult"></p>
+        </div>
       </div>
-
-      <div>
-        <input type="number" id="weight" placeholder="Weight (kg)">
-      </div>
-
-      <input type="button" value="Calculate BMI" onclick="calculateBMI()">
-
-      <p id="bmiResult"></p>
     </div>
-  </div>
-</div>
+
+    <!-- SLOPE SECTION -->
+    <div class="container subbanner">
+      <div>
+        <h3> Slope </h3>
+        <p>Calculate and display the slope of a line based on two points, (x₁,y₁) and (x₂,y₂) provided by the user.</p>
+        <a class="links" href="https://www.khanacademy.org/math/cc-eighth-grade-math/cc-8th-linear-equations-functions/8th-slope/a/slope-formula">Resource</a>
+      </div>
+    </div>
+
+    <div class="solutions">
+      <div class="container">
+        <div class="card">
+          <h4>Enter Two Points</h4>
+
+          <div><input type="number" id="x1" placeholder="x1"></div>
+          <div><input type="number" id="y1" placeholder="y1"></div>
+          <div><input type="number" id="x2" placeholder="x2"></div>
+          <div><input type="number" id="y2" placeholder="y2"></div>
+
+          <input type="button" value="Calculate Slope" onclick="calculateSlope()">
+
+          <p id="slopeResult"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BMI SECTION -->
+    <div class="container subbanner">
+      <div>
+        <h3> BMI </h3>
+        <p>Calculate and display the BMI of person based on the person's height and weight.</p>
+        <a class="links" href="https://www.cdc.gov/nccdphp/dnpao/growthcharts/training/bmiage/page5_2.html">Resource</a>
+      </div>
+    </div>
+
+    <div class="solutions last">
+      <div class="container">
+        <div class="card">
+          <h4>Enter Height and Weight</h4>
+
+          <div><input type="number" id="height" placeholder="Height (m)"></div>
+          <div><input type="number" id="weight" placeholder="Weight (kg)"></div>
+
+          <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+
+          <p id="bmiResult"></p>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer" class="container center">
+      <h3>WD Lesson 3.6 Practical</h3>
+    </div> 
+  </body>
+</html>
