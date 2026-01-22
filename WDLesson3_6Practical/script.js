@@ -5,7 +5,7 @@ function calculateAverage() {
 
   let avg = (g1 + g2 + g3) / 3;
 
-  document.getElementById("averageResult").innerHTML = "Average: " + avg;
+  document.getElementById("Output").innerHTML = "Average: " + avg;
 }
 
 function calculateSlope() {
@@ -16,7 +16,7 @@ function calculateSlope() {
 
   let slope = (y2 - y1) / (x2 - x1);
 
-  document.getElementById("slopeResult").innerHTML = "Slope: " + slope;
+  document.getElementById("Output2").innerHTML = "Slope: " + slope;
 }
 
 function calculateBMI() {
@@ -25,6 +25,6 @@ function calculateBMI() {
 
   let bmi = w / (h * h);
 
-  document.getElementById("bmiResult").innerHTML = "BMI: " + bmi;
+  document.getElementById("Output3").innerHTML = "BMI: " + bmi;
 }
 
