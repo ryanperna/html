@@ -13,4 +13,22 @@ Guideline:
 
 Use past examples, classwork and practicals to assist you in completing this practical.
 */
+function calcBMI(){
+let h = parseFloat(document.getElementById("height").value);
+let w = parseFloat(document.getElementById("weight").value);
+let c = 703* (w / Math.pow(h, 2));
+let message = "";
+let op = document.getElementById("output");
 
+if (c > "18.5"){
+       message = "Underweight"
+}else if (c <= "18.5 && c >= 24.9)
+       message = "Healthy weight";
+}
+
+
+
+
+op.innerHTML = `your bmi is ${c} ${message}`
+
+}

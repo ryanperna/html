@@ -51,3 +51,11 @@ html,body{
   font-style:italic;
   color:blueviolet;
 }
+.bmiui{
+  text-decoration:none;
+  background-color:blue;
+  color:white;
+  border-radius:4px;
+  padding:6px;
+  box-shadow:2px 2px 2px black;
+}
