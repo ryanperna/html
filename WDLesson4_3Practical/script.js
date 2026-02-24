@@ -20,15 +20,19 @@ let c = 703* (w / Math.pow(h, 2));
 let message = "";
 let op = document.getElementById("output");
 
-if (c > "18.5"){
+if (c < "18.5"){
        message = "Underweight"
-}else if (c <= "18.5 && c >= 24.9)
+}else if (c >= 18.5 && c <= 24.9){
        message = "Healthy weight";
+}else if (c >= 25.0 && c >= 29.9){
+       message = "Overweight";
+}if (c >= 30.0){
+       message = "Obesity";
 }
+       
 
 
 
 
 op.innerHTML = `your bmi is ${c} ${message}`
-
 }
