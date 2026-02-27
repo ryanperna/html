@@ -24,17 +24,17 @@ problem.innerHTML = ` ${n1} + ${n2} = `;
        4) Display msg in the output
 */
 function checkResponse(){
-let user = parseint(document.getElementById("response").value);
+let user = parseInt(document.getElementById("response").value);
 let op = document.getElementById("output");
 let filename = "";
-msg = "";
+let msg = "";
 
        if(user == correct){
               filename = "correct.webp";
               msg = `Correct! <br> <img src "${filename}">`;
        }else{
               filename = "incorrect.avif";
-              msg = `Incorrect the answer is <br> <img src "${filename}">`;
+              msg = `Incorrect the answer is ${correct} <br> <img src "${filename}">`;
        }
        op.innerHTML = msg;
 }
