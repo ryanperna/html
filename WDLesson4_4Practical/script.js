@@ -6,6 +6,11 @@
 */
 let correct;
 function generateProblem(){
+let problem = document.getElementById("problem");
+let n1 = Math.floor(Math.random()*(20-0+1) +0);
+let n2 = Math.floor(Math.random()*(20-0+1) +0);
+correct = n1 + n2;
+problem.innerHTML = ` ${n1} + ${n2} = `; 
 
 }
 
@@ -18,8 +23,20 @@ function generateProblem(){
            b) otherwise set msg to "Incorrect. The answer is " followed by the correct answer.  Also include incorrect image
        4) Display msg in the output
 */
-function checkProblem(){
+function checkResponse(){
+let user = parseint(document.getElementById("response").value);
+let op = document.getElementById("output");
+let filename = "";
+msg = "";
 
+       if(user == correct){
+              filename = "correct.webp";
+              msg = `Correct! <br> <img src "${filename}">`;
+       }else{
+              filename = "incorrect.avif";
+              msg = `Incorrect the answer is <br> <img src "${filename}">`;
+       }
+       op.innerHTML = msg;
 }
 
 
