@@ -21,10 +21,10 @@ function calcInterest() {
     let op = document.getElementById("output");
     let build = "";
 
-    for (let i = 1; i <= t; i++) {
+    for (let i = 0; i <= t; i++) {
         let a = p * Math.pow((1 + r / n), n * i);
 
-        build += `Year ${i}: ${a}<br>`;
+        build += `Year ${i}: $${a.toFixed(2)}<br>`;
     }
 
     op.innerHTML = build;
