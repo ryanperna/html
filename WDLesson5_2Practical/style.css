@@ -16,6 +16,7 @@ html, body{
 }
 #output{
   padding:20px;
+  flex-wrap: wrap;
   /* Challenge 3: Set flex-wrap to wrap */
 }
 input[type="button"]{
@@ -32,6 +33,8 @@ input[type="text"]{
   border:1px solid gray;
   border-radius:10px;
   box-shadow:2px 2px 2px black;
+  flex: 0 0 150px;
+  text-align: center;
   /* Challenge 4: Set the flex to 0 0 150px */
 
 }
@@ -40,8 +43,18 @@ input[type="text"]{
             1) Provide an appropriate width and height for the image
             2) Set object-fit to cover;
 */
+.pizza {
+    width: 150px;      
+    height: 150px;    
+    object-fit: cover;
+}
 
 /* Challenge 6: Create CSS class rule named title to used with the title images.  
                 Set height to an appropriate size
 
 */
+
+.title {
+    height: 90px;     
+    object-fit: contain;
+}

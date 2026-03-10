@@ -6,7 +6,7 @@ Notes:
    c. Each image has been conveniently labeled with a number at the end in order to use a 
       loop to retrieve the images.
 2) Create an appropriate random price to display for each pizza
-3) Enter quantity is a text input
+3) Enter quantity is a text input random form 15 to 35 
 4) Buy is a button input
 
 Now that you have the template, use a for loop to produce all five pizza cards.
@@ -15,8 +15,36 @@ Now that you have the template, use a for loop to produce all five pizza cards.
 // Go to style.css for Challenge 3
 
 //init() function is called when the page loads in index.html
-function init(){
-  
 
+  
+function init() {
+  let output = document.getElementById("output");
+  let build = "";
+
+  for (let i = 1; i <= 5; i++) {
+
+    
+    let price = (Math.random() * 10 + 10).toFixed(2);
+
+    
+    let amount = Math.floor(Math.random() * 21) + 15;
+
+    build += `<div class="card">
+        <img src="images/title${i}.png" class="title">
+        <img src="images/pizza${i}.jpg" class="pizza">
+
+        <p class="price">$${price}</p>
+
+        <label>Enter Quantity:</label>
+        <input type="text" value="${amount}">
+
+        <input type="button" value="Buy">
+      </div>`;
+      
+    
+  }
+
+  output.innerHTML = build;
 }
+
 
