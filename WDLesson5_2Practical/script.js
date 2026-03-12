@@ -35,8 +35,8 @@ function init() {
 
         <p class="price">$${price}</p>
 
-        <label>Enter Quantity:</label>
-        <input type="text" value="${amount}">
+        
+        <input type="text" placeholder="Enter Qty">
 
         <input type="button" value="Buy">
       </div>`;
