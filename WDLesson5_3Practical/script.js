@@ -13,7 +13,7 @@
 function balance(){
 let op = document.getElementById("output");
 let Build = ""
-Build =+ `<table>
+Build += `<table>
         
               <tr> <th>Year</th> <th>Balance</th> </tr>`;
                 
@@ -22,9 +22,9 @@ Build =+ `<table>
 let p = parseFloat(document.getElementById("p").value); 
 let r = parseFloat(document.getElementById("r").value);  
 let t = parseFloat(document.getElementById("t").value); 
-let n = 1
+let n = 1;
 for (let i = 0; i <= t; i++) {
-        let a = p * Math.pow((1 + r / n), n * i);
+        let a = p * Math.pow((1 + (r/100) / n), n * i);
 
         Build +=`
            <tr>      
@@ -35,7 +35,7 @@ for (let i = 0; i <= t; i++) {
            
                 
     }
-Build =+ `</table>`;
+Build += `</table>`;
 op.innerHTML= Build
 }
 
