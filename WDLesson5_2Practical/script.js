@@ -26,8 +26,7 @@ function init() {
     
     let price = (Math.random() * 10 + 10).toFixed(2);
 
-    
-    let amount = Math.floor(Math.random() * 21) + 15;
+  
 
     build += `<div class="card">
         <img src="images/title${i}.png" class="title">
