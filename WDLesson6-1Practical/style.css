@@ -54,7 +54,7 @@ nav a:hover{
   max-width: 100px;
   overflow:hidden;
   box-shadow:2px 2px 2px black;
-  object-fit: cover;
+  
 
 }
 
@@ -79,8 +79,9 @@ nav a:hover{
 #panel{
   flex:1;
 }
-#card img{
-  width:100%;
+.card img{
+  width:150px;
+  height:150px;
 }
 .food{
   width:150px;

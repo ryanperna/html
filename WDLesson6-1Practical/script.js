@@ -35,6 +35,7 @@ for(let x = 0; x < meat_images.length; x++){
 
 m.innerHTML= build;
 }
+build = "";
 for(let y = 0; y < seafood_images.length; y++){
     build += `<div class = "card">
               <img src = "images/${seafood_images[y]}">
@@ -44,6 +45,7 @@ for(let y = 0; y < seafood_images.length; y++){
     </div>`;
   s.innerHTML= build;
 }
+build = "";
 for(let z = 0; z < dessert_images.length; z++){
     build += `<div class = "card">
               <img src = "images/${dessert_images[z]}">
