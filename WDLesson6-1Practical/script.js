@@ -10,11 +10,11 @@ let meat_images = ["beeftips.jpg","brisket.jpg","ribeye.jpg","steak.jpg"];
 let meat_prices = [20.99, 18.99, 30.99,20.99];
 let meat_titles = ["Beeftips", "Brisket", "Ribeye","Steak"];
 
-let seafood_images = ["clams.jpg", "crabs.jpg", "lobster.jpg", "scallops.jpg", "shrimp.jpg", "tuna.jpg"];
+let seafood_images = ["clams.jpg", "crabs.jpg", "lobster.png", "scallops.jpg", "shrimp.jpg", "tuna.jpg"];
 let seafood_prices = [15.99, 45.99, 35.99, 17.99, 13.99, 10.99];
 let seafood_titles = ["Clams", "Crabs", "Lobster", "Scallops", "Shrimp", "Tuna"];
 
-let dessert_images = ["flan.jpg", "oreocup.jpg","passionberry.jpg"];
+let dessert_images = ["flan.jpg", "oreocup.jpg","passionberry.jpeg"];
 let dessert_prices = [17.99, 10.99, 12.99];
 let dessert_titles = ["Flan", "OreoCup", "PassionBerry"];
 
