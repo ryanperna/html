@@ -50,10 +50,12 @@ nav a:hover{
   padding:10px;
   border:1px solid gray;
   text-align:center;
-  min-width: 180px;
-  max-width: 180px;
+  min-width: 100px;
+  max-width: 100px;
   overflow:hidden;
   box-shadow:2px 2px 2px black;
+  object-fit: cover;
+
 }
 
 .highlight{
