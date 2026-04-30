@@ -22,40 +22,7 @@
      <div class="container">
       <div id="leftPanel">
         
-        <div class="card">
-          <h3>Filter By On Street</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByBorough()"> Search </a>
-        </div>
-        
-
- <div class="card">
-          <h3>Filter By Off Street</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByZip()"> Search </a>
-        </div>
-        
-<div class="card">
-          <h3>Filter By Date</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByComplaint()"> Search </a>
-        </div>
-<div class="card">
-          <h3>Filter By Factor</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByComplaint()"> Search </a>
-        </div>
-<div class="card">
-          <h3>Filter By Type</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByComplaint()"> Search </a>
-        </div>
-<div class="card">
+    <div class="card">
           <h3>ID Search</h3>
           <input type="text" id="ID" placeholder="Enter ID">
           <hr></hr>
@@ -63,10 +30,40 @@
         </div>
         
 
+ <div class="card">
+          <h3>Search By Off Street</h3>
+          <input type="text" id="Off" placeholder="Enter Off street (same spelling)">
+          <hr></hr>
+          <a class="button" onclick="SearchByStreet()"> Search </a>
+        </div>
+        
+<div class="card">
+          <h3>Filter By Factor</h3>
+          <select></select>
+          <hr></hr>
+          <a class="button" onclick="filterByComplaint()"> Search </a>
+        </div>
+<div class="card">
+          <h3> Filter by Vehicle Type</h3>
+          <input type="text" id="Type" placeholder="Select Vehicle Type">
+          <select id="vtype"></select>
+          <hr></hr>
+          <a class="button" onclick="filterbyvtype()"> Search </a>
+        </div>
+
+        <div class="card">
+          <h3>Filter By Date</h3>
+          <select></select>
+          <hr></hr>
+          <a class="button" onclick="filterByBorough()"> Search </a>
+        </div>
+        
+
       </div>
       
       <div class="card" id="rightPanel">
         <div id="result" class="container"></div>
+        <a class="button" onclick="init()"> Reset </a>
         <div id="output" class="container"></div>
       </div>
       
