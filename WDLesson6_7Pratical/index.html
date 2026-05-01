@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>WD_6.4 Prac Soln</title>
+    <title>WD_6.7 Prac Soln</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="script.js"></script>
+    <script src="fillDropDown.js"></script>
    </head>
 
   <body onload="init()">
@@ -31,32 +32,26 @@
         
 
  <div class="card">
-          <h3>Search By Off Street</h3>
-          <input type="text" id="Off" placeholder="Enter Off street (same spelling)">
+          <h3>Search By On Street</h3>
+          <input type="text" id="Off" placeholder="Enter street (ALL CAPS)">
           <hr></hr>
           <a class="button" onclick="SearchByStreet()"> Search </a>
         </div>
         
 <div class="card">
-          <h3>Filter By Factor</h3>
-          <select></select>
+          <h3>Search By Factor</h3>
+          <input type="text" id="factor" placeholder="Enter factor (same spelling)">
           <hr></hr>
-          <a class="button" onclick="filterByComplaint()"> Search </a>
+          <a class="button" onclick="SearchByFactor()"> Search </a>
         </div>
 <div class="card">
           <h3> Filter by Vehicle Type</h3>
-          <input type="text" id="Type" placeholder="Select Vehicle Type">
-          <select id="vtype"></select>
+          
+          <select id="vtypes"></select>
           <hr></hr>
           <a class="button" onclick="filterbyvtype()"> Search </a>
         </div>
 
-        <div class="card">
-          <h3>Filter By Date</h3>
-          <select></select>
-          <hr></hr>
-          <a class="button" onclick="filterByBorough()"> Search </a>
-        </div>
         
 
       </div>
