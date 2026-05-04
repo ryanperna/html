@@ -25,7 +25,7 @@ nav a:hover{
   color:white;
 }
 .subbanner{
-  background-color:cornflowerblue;
+  background-color:rgb(105, 237, 100);
 }
 #banner{
   background-color:rgb(30, 194, 84);
@@ -64,7 +64,7 @@ nav a:hover{
   box-shadow:2px 2px 2px black;
 }
 .button:hover{
-  background-color:cornflowerblue;
+  background-color:rgb(207, 157, 80);
 }
 #output{
   flex-wrap:wrap;
@@ -86,7 +86,7 @@ nav a:hover{
   min-width:200px;
 }
 #result{
-  background-color: rgb(78, 220, 251);
+  background-color: rgb(117, 154, 183);
   color:red;
   max-width: 200px;
   font-size: 20px;
