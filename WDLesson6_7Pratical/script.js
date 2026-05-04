@@ -63,90 +63,70 @@ function SearchByID(){
   output.innerHTML = build;
 }
 
-function SearchByStreet(){
+function SearchStreetAndFactor(){
   let output = document.getElementById("output");
-  let on_street_name = document.getElementById("Off").value;
+  let street = document.getElementById("streetBox").value.trim();
+  let factor = document.getElementById("factorBox").value.trim();
   let result = document.getElementById("result");
-  
+
   let build = "";
   let ct = 0;
 
-  for(let i = 0; i < data.length; i+=1){
+  for(let i = 0; i < data.length; i++){
     let M = data[i];
-    if(M.on_street_name == on_street_name){
-     build += `<div class="fitted card">
-                 <h3>${M.on_street_name}</h3>
-                 <hr>
-                 <p>${M.off_street_name}</p>
-                 <p>${M.crash_date}</p>
-                 <p>${M.contributing_factor_vehicle_1}</p>
-                 <hr>
-                 <p>Vehicle type- ${M.vehicle_type_code1}</p>
-                 <hr>
-                 <p>ID ${M.collision_id}</p>
-              </div>`    
-      ct += 1;
+
+   
+    let streetMatch = street === "" || M.on_street_name == street;
+    let factorMatch = factor === "" || M.contributing_factor_vehicle_1 == factor;
+
+    if(streetMatch && factorMatch){
+      build += `<div class="fitted card">
+                  <h3>${M.on_street_name}</h3>
+                  <hr>
+                  <p>${M.off_street_name}</p>
+                  <p>${M.crash_date}</p>
+                  <p>${M.contributing_factor_vehicle_1}</p>
+                  <hr>
+                  <p>Vehicle type- ${M.vehicle_type_code1}</p>
+                  <hr>
+                  <p>ID ${M.collision_id}</p>
+                </div>`;
+      ct++;
     }
   }
-  result.innerHTML = `${ct} Results found.`
+
+  result.innerHTML = `${ct} Results found.`;
   output.innerHTML = build;
 }
 
-function SearchByFactor(){
-  let output = document.getElementById("output");
-  let contributing_factor_vehicle_1 = document.getElementById("factor").value;
-  let result = document.getElementById("result");
-  
-  let build = "";
-  let ct = 0;
-
-  for(let i = 0; i < data.length; i+=1){
-    let M = data[i];
-    if(M.contributing_factor_vehicle_1 == contributing_factor_vehicle_1){
-     build += `<div class="fitted card">
-                 <h3>${M.on_street_name}</h3>
-                 <hr>
-                 <p>${M.off_street_name}</p>
-                 <p>${M.crash_date}</p>
-                 <p>${M.contributing_factor_vehicle_1}</p>
-                 <hr>
-                 <p>Vehicle type- ${M.vehicle_type_code1}</p>
-                 <hr>
-                 <p>ID ${M.collision_id}</p>
-              </div>`    
-      ct += 1;
-    }
-  }
-  result.innerHTML = `${ct} Results found.`
-  output.innerHTML = build;
-}
 function filterbyvtype(){
   let output = document.getElementById("output");
-  let contributing_factor_vehicle_1 = document.getElementById("vtype").value;
+  let vtype = document.getElementById("vtypes").value;
   let result = document.getElementById("result");
-  
+
   let build = "";
   let ct = 0;
 
-  for(let i = 0; i < data.length; i+=1){
+  for(let i = 0; i < data.length; i++){
     let M = data[i];
-    if(M.contributing_factor_vehicle_1 == contributing_factor_vehicle_1){
-     build += `<div class="fitted card">
-                 <h3>${M.on_street_name}</h3>
-                 <hr>
-                 <p>${M.off_street_name}</p>
-                 <p>${M.crash_date}</p>
-                 <p>${M.contributing_factor_vehicle_1}</p>
-                 <hr>
-                 <p>Vehicle type- ${M.vehicle_type_code1}</p>
-                 <hr>
-                 <p>ID ${M.collision_id}</p>
-              </div>`    
-      ct += 1;
+    if(M.vehicle_type_code1 == vtype){  
+      build += `<div class="fitted card">
+                  <h3>${M.on_street_name}</h3>
+                  <hr>
+                  <p>${M.off_street_name}</p>
+                  <p>${M.crash_date}</p>
+                  <p>${M.contributing_factor_vehicle_1}</p>
+                  <hr>
+                  <p>Vehicle type- ${M.vehicle_type_code1}</p>
+                  <hr>
+                  <p>ID ${M.collision_id}</p>
+                </div>`;
+      ct++;
     }
   }
-   result.innerHTML = `${ct} Results found.`
-   output.innerHTML = build;
 
-  }
+  result.innerHTML = `${ct} Results found.`;
+  output.innerHTML = build;
+}
+
 

@@ -32,21 +32,19 @@
         
 
  <div class="card">
-          <h3>Search By On Street</h3>
-          <input type="text" id="Off" placeholder="Enter street (ALL CAPS)">
-          <hr></hr>
-          <a class="button" onclick="SearchByStreet()"> Search </a>
-        </div>
-        
-<div class="card">
-          <h3>Search By Factor</h3>
-          <input type="text" id="factor" placeholder="Enter factor (same spelling)">
-          <hr></hr>
-          <a class="button" onclick="SearchByFactor()"> Search </a>
-        </div>
-<div class="card">
+  <h3>Search by Street + Factor</h3>
+
+  <input type="text" id="streetBox" placeholder="Enter street (ALL CAPS)">
+  <hr>
+
+  <input type="text" id="factorBox" placeholder="Enter factor (same spelling)">
+  <hr>
+
+  <a class="button" onclick="SearchStreetAndFactor()"> Search </a>
+</div>
+
+<div class="card" id = >
           <h3> Filter by Vehicle Type</h3>
-          
           <select id="vtypes"></select>
           <hr></hr>
           <a class="button" onclick="filterbyvtype()"> Search </a>

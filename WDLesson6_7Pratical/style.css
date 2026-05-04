@@ -50,14 +50,14 @@ nav a:hover{
 
 .highlight{
   font-style:italic;
-  color:blue;
+  color:rgb(20, 208, 89);
 }
 .heading{
   font-weight:bold;
 }
 .button{
   text-decoration:none;
-  background-color:blue;
+  background-color:rgb(224, 123, 14);
   color:white;
   border-radius:4px;
   padding:6px;
@@ -86,7 +86,7 @@ nav a:hover{
   min-width:200px;
 }
 #result{
-  background-color: yellow;
+  background-color: rgb(78, 220, 251);
   color:red;
   max-width: 200px;
   font-size: 20px;
