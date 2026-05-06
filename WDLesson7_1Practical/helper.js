@@ -26,10 +26,29 @@ function celsius( temp ){
 
 //Challenge 3: Create a function bmi() that accepts a person's height (in inches) and weight (in pounds) and then returns the person's BMI. 
 // (Hint: Look up the formula. You have done this in past activities).
+function bmi(height,weight){
+  height = height /100;
+  let bmi = (weight / (height*height))
+  return bmi
 
+}
 
 //Challenge 5: Create a function bmiCategory() that accepts a person's BMI and returns their category as either "underweight", "normal weight", "overweight" or "obese".
 // (Hint: This requires decisions. See past activities).
+function bmiCategory(bmivalue){
+
+  if(bmivalue <= 18.5){
+    return "Underweight"
+  }elseif(bmivalue >= 18.5 && bmivalue <= 24.9){
+    return "Normal Weight"
+    
+
+     
+
+  }
+    
+   
+
 
 
 //Challenge 7: Create a function lottery() that accepts how many random numbers to produce and returns a string of that many random numbers.
