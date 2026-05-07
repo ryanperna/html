@@ -30,11 +30,14 @@ function init(){
 
   
   //Challenge 8: Call lottery() with some number and display the results.
-
+ let result = lottery(3);
+display(`Lotto numbers: ${result}`);
 
 
   //Challengen 10: Create an array survey which contains several "Y" and "N" items. Pass this survey array to the function results( ) and display the value returned.
-
-  
+ let survey_results = ["Y","N","N","N","N","Y","N","Y","N","Y","Y","N"];
+  display(` number of Y responses: ${results(survey_results)}`);
 }
+  
+
 

@@ -37,11 +37,15 @@ function bmi(height,weight){
 // (Hint: This requires decisions. See past activities).
 function bmiCategory(bmivalue){
 
-  if(bmivalue <= 18.5){
+  if(bmivalue < 18.5){
     return "Underweight"
-  }elseif(bmivalue >= 18.5 && bmivalue <= 24.9){
-    return "Normal Weight"
-    
+  }else if(bmivalue >= 18.5 && bmivalue <24.9){
+    return "Normal Weight";
+    }else if(bmivalue >= 24.9 && bmivalue <29.9){
+     return "Overweight";
+    }else{
+      return "obese";
+    }
 
      
 
@@ -53,8 +57,24 @@ function bmiCategory(bmivalue){
 
 //Challenge 7: Create a function lottery() that accepts how many random numbers to produce and returns a string of that many random numbers.
 // Random numbers range from 1 to 48. (Hint: Solution requires a for loop and a build variable. Use randint( ) provided at the top to produce the random numbers.  
+function lottery(num){
+ let lotto = "";
+ for(let i = 0; i <= num; i++){
+    lotto += `${randint(1,48)}`;
 
+ }
+ return lotto;
+}
 
 //Challenge 9: Create a function results() that accepts an array of "Y" or "N" responses and returns the number of "Y" responses.
-
+function results(myArray){
+  let Ycount = 0;
+  for (let i=0; i < myArray.length; i+=1){
+    let response = myArray[i];
+    if (response =="Y"){
+      Ycount +=1;
+    }
+  }
+  return Ycount;
+}
 
