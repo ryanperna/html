@@ -67,10 +67,10 @@ function lottery(num){
 }
 
 //Challenge 9: Create a function results() that accepts an array of "Y" or "N" responses and returns the number of "Y" responses.
-function results(myArray){
+function results(Array){
   let Ycount = 0;
-  for (let i=0; i < myArray.length; i+=1){
-    let response = myArray[i];
+  for (let i=0; i < Array.length; i+=1){
+    let response = Array[i];
     if (response =="Y"){
       Ycount +=1;
     }
