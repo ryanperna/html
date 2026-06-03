@@ -1,61 +1,92 @@
-//Data Source: https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9
+let data;
 
-//global variables
-let data, info, output;
+// Load JSON
+async function init() {
+    let link = "mvc.json";
+    let info = await fetch(link);
+    data = await info.json();
+    console.log(data);
 
-async function init(){
-  let link = "mvc.json"; //https://data.cityofnewyork.us/resource/erm2-nwe9.json?$limit=200";
-  info = await fetch(link);
-  data = await info.json();
-  console.log(data);
+    // Show all hotspots initially
+    displayAll();
 }
 
-function ByProvider(){
- 
-  let SPECTRUM = 0, dot = 0, hpd = 0, other = 0;
-
-  //Task 1: Traverse the data and increment the appropriate tally variable using the agency of the complaint. Use the tally variable "other" to capture all the other agencies.
-  for(let i = 0; i < data.length; i++){
-    let p = data[i];
-    if(p.provider == "SPECTRUM"){
-      SPECTRUM++;
-    }else if(p.provider == "DOT"){
-      dot++;
-    }else if(complaint.agency == "HPD"){
-      hpd++;
-    }else{
-      other++;
-    }
-  }
-
-
-  //Task 2: Construct the chart data using the full agency name. (Hint: Go to the data source)
-  let chartData = [
-      ["NYC Police Department", nypd],
-      ["Dept of Transportation", dot],
-      ["Dept of Housing preservation and Development", hpd],
-      ["OTHER", other]
-  ];
-      
-
-
-    
-
-  //Task 3: Retrieve the chart type from the user via the drop down menu
-  let chartType = document.getElementById("chartType").value;
-
-  //Task 4: Display the chart of the breakdown of complaints by agency.
- displayChart(chartData,"output", chartType);
+// Build a card for each hotspot
+function card(h) {
+    return `
+        <div class="fitted card">
+            <h3>${h.provider}</h3>
+            <p><strong>Borough:</strong> ${h.borough}</p>
+            <p><strong>Location:</strong> ${h.location}</p>
+        </div>
+    `;
 }
 
-
-// displayChart() accepts the data, an id of the container where to display the chart, and the type of chart to display in the container.
-function displayChart( data, chart_id, chart_type ){
-  let chart = c3.generate({
-    bindto: `#${chart_id}`,
-    data: {
-      columns: data,
-      type: chart_type
+// Show all hotspots on load
+function displayAll() {
+    let build = "";
+    for (let h of data) {
+        build += card(h);
     }
-  });
+    document.getElementById("output").innerHTML = build;
+}
+
+// Filter by borough
+function filterByBoro() {
+    let boro = document.getElementById("borough").value;
+    let build = "";
+
+    for (let h of data) {
+        if (h.borough === boro) {
+            build += card(h);
+        }
+    }
+
+    document.getElementById("output").innerHTML = build;
+}
+
+// Chart by provider
+function ByProvider() {
+    let SPECTRUM = 0;
+let TRANSITWIRELESS = 0;
+let HARLEM = 0;
+let BPL = 0;
+let OTHER = 0;
+
+for (let h of data) {
+    let p = h.provider;
+
+    if (p === "SPECTRUM") {
+        SPECTRUM++;
+    }
+    else if (p === "Transit Wireless") {
+        TRANSITWIRELESS++;
+    }
+    else if (p === "Harlem") {
+        HARLEM++;
+    }
+    else if (p === "BPL") {
+        BPL++;
+    }
+    else {
+        OTHER++;
+    }
+}
+
+let chartData = [
+    ["SPECTRUM", SPECTRUM],
+    ["TRANSIT WIRELESS", TRANSITWIRELESS],
+    ["HARLEM", HARLEM],
+    ["BPL", BPL],
+    ["OTHER", OTHER]
+];
+    let chartType = document.getElementById("chartType").value;
+
+    c3.generate({
+        bindto: "#chart",
+        data: {
+            columns: chartData,
+            type: chartType
+        }
+    });
 }

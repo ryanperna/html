@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hotspot Provider Charts</title>
+
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="c3.css" rel="stylesheet" type="text/css"/>
+
+    <script src="d3.js"></script>
+    <script src="c3.js"></script>
+
+    <script src="helper.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body onload="init()">
+
+    <div id="banner" class="container center">
+        <h1>Hotspot Provider Charts</h1>
+    </div>
+
+    <div class="container subbanner">
+        <p>Search and chart NYC hotspot locations.</p>
+    </div>
+
+    <div class="container two-col">
+
+        <!-- LEFT SIDE -->
+        <div class="left-side">
+
+            <div class="card">
+                <h3>Search by Borough</h3>
+                <select id="borough">
+                    <option value="MANHATTAN">Manhattan</option>
+                    <option value="BROOKLYN">Brooklyn</option>
+                    <option value="QUEENS">Queens</option>
+                    <option value="BRONX">Bronx</option>
+                    <option value="STATEN ISLAND">Staten Island</option>
+                </select>
+                <a class="button" onclick="filterByBoro()">Search</a>
+            </div>
+
+            <div class="card">
+                <h3>Select Chart Type</h3>
+                <select id="chartType">
+                    <option value="bar">Bar</option>
+                    <option value="pie">Pie</option>
+                </select>
+                <a class="button" onclick="ByProvider()">Show Chart</a>
+            </div>
+
+            <div class="card">
+                <h1>Output</h1>
+                <div id="output"></div>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-side">
+            <div class="card">
+                <h1>Chart</h1>
+                <div id="chart"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="footer" class="container center">
+        <h3>NYC Hotspot Dashboard</h3>
+    </div>
+
+</body>
+</html>
