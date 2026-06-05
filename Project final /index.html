@@ -17,31 +17,26 @@
 
 <body onload="init()">
 
+    <!-- Banner -->
     <div id="banner" class="container center">
-        <h1>Hotspot Provider Charts</h1>
+        <h1>NYC Hotspot Dashboard</h1>
+        <p class="subtitle">Search, filter, and visualize hotspot provider data.</p>
     </div>
 
-    <div class="container subbanner">
-        <p>Search and chart NYC hotspot locations.</p>
+    <!-- Subbanner -->
+    <div class="container subbanner center">
+        <p>Use the tools below to explore hotspot locations across NYC.</p>
     </div>
 
+    <!-- Main Layout -->
     <div class="container two-col">
 
         <!-- LEFT SIDE -->
         <div class="left-side">
 
-            <div class="card">
-                <h3>Search by Borough</h3>
-                <select id="borough">
-                    <option value="MANHATTAN">Manhattan</option>
-                    <option value="BROOKLYN">Brooklyn</option>
-                    <option value="QUEENS">Queens</option>
-                    <option value="BRONX">Bronx</option>
-                    <option value="STATEN ISLAND">Staten Island</option>
-                </select>
-                <a class="button" onclick="filterByBoro()">Search</a>
-            </div>
+            
 
+            <!-- Chart Type -->
             <div class="card">
                 <h3>Select Chart Type</h3>
                 <select id="chartType">
@@ -51,6 +46,7 @@
                 <a class="button" onclick="ByProvider()">Show Chart</a>
             </div>
 
+            <!-- Output Cards -->
             <div class="card">
                 <h1>Output</h1>
                 <div id="output"></div>
@@ -68,6 +64,7 @@
 
     </div>
 
+    <!-- Footer -->
     <div id="footer" class="container center">
         <h3>NYC Hotspot Dashboard</h3>
     </div>
